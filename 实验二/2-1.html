@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<script>
+function validateForm()
+{
+	var fiftyNumber=0,twentyNumber=0,tenNumber=0,fifthNumber=0,oneNumber=0,restNumber=0
+	var x=document.form['myForm']['fname'].value;
+	if(x==null||x==''){
+		alert('输入1个1-100的数字金额');
+		return false;
+		}
+	else{
+		if((x%50)!=0){
+			 fiftyNumber=parseInt(x/50);
+			 x=x%50;
+			 
+			 if((x%20)!=0){
+				twentyNumber=parseInt(x/20);
+				x=x%20;
+				if((x%10)!=0){
+					tenNumber=parseInt(x/10);
+					x=x%10;
+					if((x%5)!=0){
+						fifthNumber=parseInt(x/5);
+						x=x%5;
+						
+						}
+					else{
+						fifthNumber=x/5
+						}
+					}
+				else{
+					tenNumber=x/10;
+					}
+				}
+			else{
+				twentyNumber=x/20
+				}
+				
+		}else{
+			 fiftyNumber=x/50;
+			 
+			 }
+	alert('50元'+fiftyNumber+'张,'+'20元'+twentyNumber+'张,'+'10元'+tenNumber+'张,'+'5元'+fifthNumber+'张,'+'1元'+x+'张');	
+}
+}
+</script>
+<title>实验二</title> 
+</head>
+<body>
+
+<form name="myForm"  method="post">
+金额: <input type="text" name="money">
+	  <input type="button" value="提交" onsubmit="return validateForm()"></br>
+	  <input type="text" name="fiftyNumber"></br>
+	  <input type
+	  
+</form>
+</body>
+</html>
+https://wenku.baidu.com/view/75f980435f0e7cd185253638.html?re=view
