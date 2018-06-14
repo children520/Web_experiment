@@ -4,15 +4,27 @@
 <meta charset="utf-8">
 <script>
 function myFunction(){
-	for(var i=0;i<100;i++){
-		alert("欢迎");
-		}
+	one=Number(body.oneBook.value);
+	second=Number(body.secondBook.value);
+	third=Number(body.thirdBook.value);
+	four=Number(body.fourBook.value);
+	fifth=Number(body.fifthBook.value);
+	total=one+second+third+four+fifth;
+	document.body.total.value=total;
 }
 </script>
 </head>
 <body>
+<form name="body">
+one:<input type="text" name="oneBook">
+two:<input type="text" name="secondBook">
+third:<input type="text" name="thirdBook">
+four:<input type="text" name="fourBook">
+fifth:<input type="text" name="fifthBook">
+total:<input type="text" name="total">
+<input type="button" onclick="myFunction()" value="显示总价" />
 
-<input type="button" onclick="myFunction()" value="显示欢迎" />
+</form>
 
 </body>
 </html>

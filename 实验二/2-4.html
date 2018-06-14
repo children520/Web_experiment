@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+function myFunction(){
+	var array=new Array();
+	var total=0;
+	for(var i=0;i<10;i++){
+		array[i]=Number(document.getElementsByName("Book")[i].value);
+	}
+	for(var j=0;j<10;j++){
+		total+=array[j];
+		}
+	document.body.average.value=total/10;
+	array.sort();
+	document.body.min.value=array[0];
+	document.body.max.value=array[9];
+	
+}
+</script>
+</head>
+<body>
+<form name="body">
+one:<input type="text" name="Book"></br>
+two:<input type="text" name="Book"></br>
+third:<input type="text" name="Book"></br>
+four:<input type="text" name="Book"></br>
+fifth:<input type="text" name="Book"></br>
+six:<input type="text" name="Book"></br>
+seven:<input type="text" name="Book"></br>
+eight:<input type="text" name="Book"></br>
+nine:<input type="text" name="Book"></br>
+ten:<input type="text" name="Book"></br>
+average:<input type="text" name="average"></br>
+max:<input type="text" name="max"></br>
+min:<input type="text" name="min"></br>
+<input type="button" onclick="myFunction()" value="显示" />
+
+</form>
+
+</body>
+</html>
