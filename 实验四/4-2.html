@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+	function IsVIP(){
+
+		if(form.vip.value){
+			console.log(form.vip.value)
+			form.fourNumber.hidden=""
+		}else{
+			form.fourNumber.hidden="hidden"
+		}
+	  
+		
+		
+	}
+</script>
+<title>实验四</title>
+</head>
+<body>
+	<form action="4-2.jsp" name="form" method="POST">
+		账号：<input type="text" name="account"><br>
+		密码：<input type="text" name="password"><br>
+		是否成为VIP会员：<input type="checkbox" name="vip" onclick="IsVIP()"/><br>
+		<input type="text" hidden="hidden" name="fourNumber">
+		<input type="submit" value="登录">
+	</form>
+</body>
+</html>
+		
